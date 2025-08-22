@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let guesses = ['a', 'e', 'i', 'o', 'u'];
     let correctGuesses = [];
     let typedLetter = "";
-    let lives = 3;
+    let lives = 5;
     let winLanguage = "";
     let lossLanguage = "";
     let puzzleDate = "";
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         if (status === "WIN") {
             shareStatus = `${livesDisplay}\n\nI won v_w_l #${puzzleNumber}!\n\n${grid}`;
         } else if (status === "LOSE") {
-            shareStatus = `I lost v_w_l on ${dateStr}\n${grid}`
+            shareStatus = `I lost v_w_l #${puzzleNumber}!\n\n${grid}`
         } else if (status === "IN PROGRESS") {
             shareStatus = `In progress on v_w_l`
         } else {
