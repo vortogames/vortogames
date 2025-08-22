@@ -1,0 +1,31 @@
+.share-overlay[hidden] { display: none; }
+.share-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.35);
+  display: grid; place-items: center;
+  z-index: 999;
+}
+.share-modal {
+  width: min(92vw, 420px);
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+  padding: 16px;
+  display: grid; gap: 12px;
+  font-family: inherit;
+}
+.share-modal h3 {
+  margin: 0; font-size: 18px; color: #333;
+}
+.share-modal pre {
+  margin: 0; background: #f5f5f7; padding: 12px; border-radius: 8px; white-space: pre-wrap;
+}
+.share-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.share-actions a, .share-actions button, .share-modal .close {
+  padding: 8px 12px; border-radius: 8px; border: none; background: #edeef0; color: #333; cursor: pointer;
+  text-decoration: none; display: inline-flex; align-items: center; justify-content: center;
+}
+.share-actions a:hover, .share-actions button:hover, .share-modal .close:hover { background: #e2e3e7; }
+.share-buttons {
+  display: flex; gap: 8px; flex-wrap: wrap; margin: 0 auto;
+}
