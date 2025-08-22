@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>v_w_l</title>
+  <link rel="stylesheet" href="../static/css/style.css" />
+  <link rel="stylesheet" href="../static/css/share.css">
+</head>
+<body>
+  <div class="app-wrap">
+    <div class="game-frame">
+      <header class="logo">
+        <img src="../static/graphics/v_w_l/logo2.png" alt="v_w_l logo" />
+      </header>
+      <main class="content">
+        <div class="lives" id="lives"></div>
+        <div class="word" id="word"></div>
+        <div class="message" id="message">
+        </div>
+        <div class="typed-group">
+          <div class="typed" id="typed"></div>
+          <div class="typed-underline" id="typed-underline"></div>
+          <button id="shareBtn" class="share-button" style="display:none">share</button>
+        </div>
+      </main>
+      <footer class="keyboard" id="keyboard"></footer>
+
+      <div class="share-overlay" id="shareOverlay" hidden>
+        <div class="share-modal">
+          <h3>Share your result</h3>
+          <pre id="sharePreview"></pre>
+          <div class="share-actions">
+            <div class="share-buttons">
+              <button id="nativeShare">Share…</button>
+              <button id="copyShare">Copy</button>
+            </div>
+          </div>
+          <button class="close" id="closeShare">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script type="module" src="v_w_l.js"></script>
+</body>
+</html>
