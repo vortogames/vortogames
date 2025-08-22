@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     wordDiv.innerHTML = "";
                     typedDiv.innerHTML = "";
                     wordDiv.innerHTML = lossLanguage;
-                    messageDiv.innerHTML = "The word was: <br>" + word
+                    messageDiv.innerHTML = "The word was: <br><b>" + word + "</b>";
                     typedUnderlineDiv.style.display = "none";
                     attachShareButton(shareBtn, () => buildShareText("LOSE"), () => "v_w_l result");
                     showShareButton();
