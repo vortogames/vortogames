@@ -23,14 +23,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const wordDiv = document.getElementById("word");
     const livesDiv = document.getElementById("lives");
     const messageDiv = document.getElementById("message");
+    const shareBtn = document.getElementById("shareBtn");
 
     // Keyboard variables
     const row1 = "qwertyuiop".split("");
     const row2 = "asdfghjkl".split("");
     const row3 = "zxcvbnm".split("");
-
-    // Share button
-    const shareBtn = document.getElementById("shareBtn");
 
     // Audio elements
     const SOUND_SOURCES = {
@@ -52,16 +50,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const AUDIO_BANK = createAudioBank(SOUND_SOURCES);
 
     function buildShareText(status) {
-        // Example: customize as you like
         const dateStr = new Date().toISOString().slice(0,10);
         const grid = outcomes.join("");
         const diamondEmoji = "♦️";
         const livesDisplay = diamondEmoji.repeat(lives);
         let shareStatus = ''
         if (status === "WIN") {
-            shareStatus = `${livesDisplay}\n\nI won v_w_l #${puzzleNumber}!\n\n${grid}`;
+            shareStatus = `${livesDisplay}\n\nI won v_w_l #${puzzleNumber}!\nhttps://vortogames.com\n\n${grid}`;
         } else if (status === "LOSE") {
-            shareStatus = `I lost v_w_l #${puzzleNumber}!\n\n${grid}`
+            shareStatus = `I lost v_w_l #${puzzleNumber}!\nhttps://vortogames.com\n\n${grid}`
         } else if (status === "IN PROGRESS") {
             shareStatus = `In progress on v_w_l`
         } else {

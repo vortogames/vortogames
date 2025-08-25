@@ -174,7 +174,9 @@ footer.keyboard {
   align-items: center;
   justify-content: center;
   background-color: #edeef0;
-  color: #555;
+  color: #333;
+  font-size: large;
+  font-weight: bold;
   margin: 3px;
   border-radius: 5px;
   border: none;

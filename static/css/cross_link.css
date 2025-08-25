@@ -1,0 +1,87 @@
+.clues {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #edeef0;
+}
+
+.clue {
+    width: 60vw;
+    font-size: 18px;
+    text-align: center;
+    max-width: 600px;
+    flex-grow: 1;
+}
+
+.arrow {
+    width: 10vh;
+    font-size: 24px;
+    width: 25px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.arrow.left {
+    text-align: left;
+}
+
+.arrow.right {
+    text-align: right;
+}
+
+/* make columns sit side-by-side, top-aligned */
+.puzzle-grid {
+  display: flex;
+  gap: 8px;            /* space between columns */
+  align-items: flex-start;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* a single vertical column of cells */
+.puzzle-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* later you can fix the height to enable scrolling: */
+  /* max-height: 360px; */
+  /* overflow-y: auto; */
+}
+
+/* optional: style for the center “payline” overlay later
+.puzzle-column.payline {
+  position: relative;
+}
+.puzzle-column.payline::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 0;
+  border-top: 2px dashed var(--accent);
+  pointer-events: none;
+}
+*/
+
+/* keep your existing .puzzle-cell */
+.puzzle-cell {
+  height: 50px;
+  width: 50px;
+  border: 2px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 2px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.selected {
+  background-color: rgb(47, 138, 59);
+}
