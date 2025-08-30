@@ -28,8 +28,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let paylineRow = 0; // which row is the highlighted row
     let offsets = []; // per-column start index where the word begins
 
-    const PAD = 4;
-
     // HTML elements
     const puzzleGrid = document.getElementById("puzzle-grid");
     const shareBtn = document.getElementById("shareBtn");
