@@ -236,8 +236,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
             });
             if (row === row3) {
                 const button = document.createElement("button");
-                button.textContent = "delete";
-                button.className = "key special";
+                // button.textContent = "delete";
+                button.className = "key special ph ph-backspace";
                 button.id = "delete";
                 button.addEventListener("click", () => handleDeletePress());
                 rowDiv.appendChild(button);
@@ -322,5 +322,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     }).catch(error => {
         console.error('There was a problem with the fetch operation:', error);
+    });
+
+    document.addEventListener("keydown", (event) => {
+        const letter = event.key.toLowerCase();
+        if (letter === "backspace") {
+            handleDeletePress();
+        } else if (letter.length === 1 && letter >= 'a' && letter <= 'z') {
+            handleKeyPress(letter);
+        }
     });
 });

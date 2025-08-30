@@ -6,6 +6,7 @@
     gap: 10px;
     padding: 20px;
     background-color: #edeef0;
+    color: #333;
 }
 
 .clue {
@@ -35,7 +36,7 @@
 /* make columns sit side-by-side, top-aligned */
 .puzzle-grid {
   display: flex;
-  gap: 8px;            /* space between columns */
+  gap: 4px;            /* space between columns */
   align-items: flex-start;
   justify-content: center;
   margin: 20px 0;
@@ -67,7 +68,6 @@
 }
 */
 
-/* keep your existing .puzzle-cell */
 .puzzle-cell {
   height: 50px;
   width: 50px;
@@ -79,9 +79,53 @@
   text-transform: uppercase;
   margin: 2px;
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: #edeef0;
 }
 
 .selected {
   background-color: rgb(47, 138, 59);
+}
+
+.row-highlight {
+  background-color: rgb(118, 47, 138);
+  color: white;
+  font-weight: bold;
+  border: none !important;
+}
+
+.directions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #edeef0;
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    text-align: center;
+}
+
+.end-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.end-subtitle {
+  font-size: 18px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.end-theme-word {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.puzzle-grid.end-screen {
+  flex-direction: column;
+  align-items: center;
 }

@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-  <title>v_w_l</title>
+  <title>Cross Link</title>
   <link rel="stylesheet" href="../static/css/style.css" />
   <link rel="stylesheet" href="../static/css/share.css">
+  <link rel="stylesheet" href="../static/css/cross_link.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css" />
 </head>
 <body>
   <div class="app-wrap">
     <div class="game-frame">
       <header class="logo">
-        <img src="../static/graphics/v_w_l/logo2.png" alt="v_w_l logo" />
+        <h1>Cross Link</h1>
       </header>
+      <div id="directions"></div>
       <main class="content">
-        <div class="lives" id="lives"></div>
-        <div class="word" id="word"></div>
-        <div class="message" id="message">
-        </div>
-        <div class="typed-group">
-          <div class="typed" id="typed"></div>
-          <div class="typed-underline" id="typed-underline"></div>
-          <button id="shareBtn" class="share-button" style="display:none">share</button>
-        </div>
+        <div class="puzzle-grid" id="puzzle-grid"></div>
+        <button id="shareBtn" class="share-button" style="display:none">share</button>
       </main>
-      <footer class="keyboard" id="keyboard"></footer>
+      <footer class="keyboard" id="keyboard">
+        <div class="clues" id="clues">
+          <div class="arrow left ph ph-caret-left" id="left-arrow"></div>
+          <div class="clue" id="clue"></div>
+          <div class="arrow right ph ph-caret-right" id="right-arrow"></div>
+        </div>
+      </footer>
 
       <div class="share-overlay" id="shareOverlay" hidden>
         <div class="share-modal">
@@ -43,7 +44,7 @@
 
     </div>
   </div>
-  <script type="module" src="v_w_l.js"></script>
+  <script type="module" src="cross_link.js"></script>
 </body>
 
 <script>

@@ -169,7 +169,8 @@ footer.keyboard {
 }
 .key {
   height: 45px;
-  width: 35px;
+  width: 30px;
+  padding: none;
   display: flex;
   align-items: center;
   justify-content: center;

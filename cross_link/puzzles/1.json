@@ -1,0 +1,36 @@
+{
+  "date": "2025-08-30",
+  "theme_word": "rocket",
+  "puzzle": [
+    {
+      "column_index": 0,
+      "answer": "arugula",
+      "clue": "Peppery lettuce alternative found in Mediterranean dishes"
+    },
+    {
+      "column_index": 1,
+      "answer": "moons",
+      "clue": "Neptune has 16 of these"
+    },
+    {
+      "column_index": 2,
+      "answer": "mercury",
+      "clue": "Element that used to be in thermometers"
+    },
+    {
+      "column_index": 3,
+      "answer": "hakeem",
+      "clue": "__ Olajuwon, Hall of Fame basketball player"
+    },
+    {
+      "column_index": 4,
+      "answer": "space",
+      "clue": "The longest key on a keyboard"
+    },
+    {
+      "column_index": 5,
+      "answer": "houston",
+      "clue": "Most populous city in Texas"
+    }
+  ]
+}
