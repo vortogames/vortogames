@@ -291,6 +291,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     function createPuzzleGridPhase2() {
         puzzleGrid.innerHTML = "";
         phase2 = true;
+        lockPageScroll(true);
 
         // tall enough for freedom to move; tune if desired
         phase2Height = maxWordLength * 2 - 1;
@@ -457,6 +458,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     function buildEndScreen() {
+        lockPageScroll(false);
         directionsDiv.innerHTML = "";
         puzzleGrid.innerHTML = "";
         puzzleGrid.classList.add("end-screen");
@@ -483,6 +485,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         showShareButton(shareBtn);
     }
+
+    function lockPageScroll(lock) {
+        const content = document.querySelector('.content');
+        if (content) content.classList.toggle('lock-scroll', !!lock);
+    }
+
 
     function giveHint() {
         
