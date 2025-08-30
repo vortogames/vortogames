@@ -335,7 +335,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
             // Touch drag (mobile) → discrete steps
             let startY = null, accum = 0;
-            const STEP_PX = 20;
+            const STEP_PX = 30;
 
             col.addEventListener(
                 "touchstart",
