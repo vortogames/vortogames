@@ -352,17 +352,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 (e) => {
                     if (startY == null) return;
                     const y = e.touches[0].clientY;
-                    const dy = y - startY; // + down, - up
+                    const dy = y - startY; // +down, -up
                     accum += dy;
                     startY = y;
 
+                    // Drag UP → word UP
                     while (accum <= -STEP_PX) {
                         nudgeColumn(colIndex, -1);
                         accum += STEP_PX;
                         e.preventDefault();
                     }
+                    // Drag DOWN → word DOWN   <-- this was -1 before
                     while (accum >= +STEP_PX) {
-                        nudgeColumn(colIndex, -1);
+                        nudgeColumn(colIndex, +1);
                         accum -= STEP_PX;
                         e.preventDefault();
                     }
