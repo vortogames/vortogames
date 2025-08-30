@@ -139,3 +139,8 @@
 .content.lock-scroll {
   overflow: hidden;                 /* no vertical page scrolling */
 }
+
+.key,
+.puzzle-column.phase2 {
+  touch-action: manipulation;
+}
