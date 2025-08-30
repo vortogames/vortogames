@@ -334,8 +334,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             );
 
             // Touch drag (mobile) → discrete steps
-            let startY = null,
-                accum = 0;
+            let startY = null, accum = 0;
             const STEP_PX = 20;
 
             col.addEventListener(
@@ -358,7 +357,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     startY = y;
 
                     while (accum <= -STEP_PX) {
-                        nudgeColumn(colIndex, +1);
+                        nudgeColumn(colIndex, -1);
                         accum += STEP_PX;
                         e.preventDefault();
                     }
@@ -485,8 +484,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     function lockPageScroll(lock) {
-        const content = document.querySelector('.content');
-        if (content) content.classList.toggle('lock-scroll', !!lock);
+        document.documentElement.classList.toggle('no-scroll', !!lock);
+        document.body.classList.toggle('no-scroll', !!lock);
     }
 
 

@@ -131,8 +131,8 @@
 }
 
 .puzzle-column.phase2 {
-  touch-action: none;               /* kill native touch scroll/pan on the element */
-  overscroll-behavior: contain;     /* stop viewport scroll chaining/bounce */
+  touch-action: none;              /* don't let the browser scroll/pan */
+  overscroll-behavior: contain;    /* don't chain to viewport */
 }
 
 /* When phase 2 starts, we’ll add this to .content to freeze page scroll */
@@ -140,7 +140,9 @@
   overflow: hidden;                 /* no vertical page scrolling */
 }
 
-.key,
-.puzzle-column.phase2 {
-  touch-action: manipulation;
+.key { touch-action: manipulation; }
+
+html.no-scroll, body.no-scroll {
+  height: 100%;
+  overflow: hidden;
 }
