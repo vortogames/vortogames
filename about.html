@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · Vorto Games</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #6c63ff;
+      --bg: #0f0f13;
+      --surface: #1a1a22;
+      --text: #f0f0f0;
+      --text-muted: #888;
+      --border: rgba(255,255,255,0.08);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1.25rem 4rem;
+    }
+
+    .frame {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .site-name {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .tagline {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+
+    .section {
+      border-top: 1px solid var(--border);
+      padding: 1.75rem 0;
+    }
+
+    .section h2 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.85rem;
+    }
+
+    .section p {
+      font-size: 0.975rem;
+      line-height: 1.75;
+      color: #ccc;
+    }
+
+    .section p + p {
+      margin-top: 0.75rem;
+    }
+
+    .streak-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      margin-top: 0.25rem;
+    }
+
+    .streak-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+    }
+
+    .streak-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+
+    .streak-body h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+
+    .streak-body p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .cta {
+      margin-top: 2.5rem;
+      padding: 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .cta p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.65rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .cta a:hover {
+      opacity: 0.88;
+    }
+
+    .footer-links {
+      margin-top: 3rem;
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="site-name">Vorto Games</p>
+
+    <h1>About</h1>
+    <p class="tagline">
+      Your destination for daily word game challenges. New puzzles every day,
+      points to earn, and streaks to protect.
+    </p>
+
+    <div class="section">
+      <h2>How scoring works</h2>
+      <p>
+        Each game can earn you up to 100 points based on your performance.
+        The better you play, the more points you earn.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Streaks</h2>
+      <div class="streak-list">
+        <div class="streak-item">
+          <div class="streak-icon">✓</div>
+          <div class="streak-body">
+            <h3>Game streaks</h3>
+            <p>Play the same game on consecutive days. Miss a day and your streak resets.</p>
+          </div>
+        </div>
+        <div class="streak-item">
+          <div class="streak-icon">★</div>
+          <div class="streak-body">
+            <h3>Winning streaks</h3>
+            <p>Win the same game on consecutive days to build a winning streak.</p>
+          </div>
+        </div>
+        <div class="streak-item">
+          <div class="streak-icon">⚡</div>
+          <div class="streak-body">
+            <h3>Total Vorto streak</h3>
+            <p>Play any game on consecutive days to maintain your overall streak.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Sign in</h2>
+      <p>
+        Vorto Games uses Google and Facebook sign-in to create and manage your account.
+        We request access to your basic profile information (name and email address) solely
+        to identify you, display your name on the leaderboard, and save your scores.
+        We do not access any other data from your Google or Facebook account.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Privacy &amp; terms</h2>
+      <p>
+        See our <a href="https://app.vortogames.com/privacy/" style="color: var(--accent);">Privacy Policy</a>
+        and <a href="https://app.vortogames.com/terms/" style="color: var(--accent);">Terms of Service</a>
+        for details on how we handle your data.
+      </p>
+    </div>
+
+    <div class="cta">
+      <p>Ready to play? Head to the app and start building your streaks today.</p>
+      <a href="https://app.vortogames.com">Play now</a>
+    </div>
+
+    <div class="footer-links">
+      <span>© 2025 Vorto Games</span>
+      <a href="https://app.vortogames.com/privacy/">Privacy</a>
+      <a href="https://app.vortogames.com/terms/">Terms</a>
+    </div>
+  </div>
+</body>
+</html>
